@@ -67,7 +67,7 @@ const Footer = () => {
             <div className="contact-info">
               <div className="contact-item">
                 <Icon icon="mdi:phone" className="icon" />
-                <span>+62 812-3456-7890</span>
+                <span>+62 896-5519-5880</span>
               </div>
               <div className="contact-item">
                 <Icon icon="mdi:email" className="icon" />
@@ -98,22 +98,6 @@ const Footer = () => {
                 whileTap={{ scale: 0.9 }}
               >
                 <Icon icon="mdi:instagram" />
-              </motion.a>
-              <motion.a
-                href="#"
-                className="social-link"
-                whileHover={{ scale: 1.2, rotate: 5 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                <Icon icon="mdi:twitter" />
-              </motion.a>
-              <motion.a
-                href="#"
-                className="social-link"
-                whileHover={{ scale: 1.2, rotate: -5 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                <Icon icon="mdi:linkedin" />
               </motion.a>
             </div>
           </div>

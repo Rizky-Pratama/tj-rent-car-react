@@ -75,7 +75,7 @@ const CarsPreview = () => {
             >
               <div className="car-image">
                 <img
-                  src={`http://127.0.0.1:8000/storage/${car.foto}`}
+                  src={`${car.foto}`}
                   alt={car.nama_mobil}
                   onError={(e) => {
                     e.target.src = "/images/placeholder-car.jpg";
@@ -112,18 +112,17 @@ const CarsPreview = () => {
                       <div className="main-price">
                         <span className="price">
                           <span>Rp</span>
-                          {(() => {
-                            const prices = getAllCarPrices(car);
-                            return prices.length > 0
-                              ? prices[0].harga_per_hari.toLocaleString()
-                              : "0";
-                          })()}
+                          {car.harga.toLocaleString("id-ID")}
                         </span>
                         <span className="period">/hari</span>
                       </div>
                     </div>
                   </div>
-                  <Link to="/contact" className="btn btn-primary">
+                  <Link
+                    to={`https://wa.me/6289655195880/?text=Halo%20saya%20mau%20sewa%20mobil%20${car.nama_mobil}`}
+                    target="_blank"
+                    className="btn btn-primary"
+                  >
                     Sewa Sekarang
                   </Link>
                 </div>

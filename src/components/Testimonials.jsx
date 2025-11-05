@@ -13,8 +13,7 @@ const Testimonials = () => {
       id: 1,
       name: "Budi Santoso",
       role: "Pengusaha",
-      image:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+      image: "images/user.jpg",
       rating: 5,
       review:
         "Pelayanan sangat memuaskan! Mobil dalam kondisi prima dan proses penyewaannya sangat mudah. Akan menggunakan jasa ini lagi untuk perjalanan selanjutnya.",
@@ -23,8 +22,7 @@ const Testimonials = () => {
       id: 2,
       name: "Sari Dewi",
       role: "Ibu Rumah Tangga",
-      image:
-        "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
+      image: "images/user.jpg",
       rating: 5,
       review:
         "Staff sangat ramah dan profesional. Mobil bersih dan nyaman untuk perjalanan keluarga. Harga juga sangat terjangkau. Highly recommended!",
@@ -33,8 +31,7 @@ const Testimonials = () => {
       id: 3,
       name: "Ahmad Wijaya",
       role: "Karyawan Swasta",
-      image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+      image: "images/user.jpg",
       rating: 5,
       review:
         "Pengalaman menyewa mobil terbaik yang pernah saya alami. Proses cepat, transparan, dan tidak ada biaya tersembunyi. Terima kasih!",
@@ -43,8 +40,7 @@ const Testimonials = () => {
       id: 4,
       name: "Linda Sari",
       role: "Mahasiswa",
-      image:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+      image: "images/user.jpg",
       rating: 4,
       review:
         "Harga student-friendly dan pelayanan ramah. Mobil sesuai dengan deskripsi dan dalam kondisi baik. Pasti akan merekomendasikan ke teman-teman.",
@@ -53,8 +49,7 @@ const Testimonials = () => {
       id: 5,
       name: "Dedi Prasetyo",
       role: "Tour Guide",
-      image:
-        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
+      image: "images/user.jpg",
       rating: 5,
       review:
         "Sebagai tour guide, saya sering menggunakan jasa rental ini. Selalu puas dengan kualitas mobil dan pelayanannya. Sangat profesional!",

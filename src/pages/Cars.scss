@@ -217,32 +217,6 @@
                 margin-left: 4px;
               }
             }
-
-            .price-options {
-              display: flex;
-              flex-direction: column;
-              gap: $spacing-xs;
-
-              .price-option {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                font-size: $font-size-xs;
-                padding: $spacing-xs;
-                background-color: rgba(0, 74, 173, 0.05);
-                border-radius: $border-radius-sm;
-
-                .type {
-                  color: $gray-dark;
-                  font-weight: 500;
-                }
-
-                .amount {
-                  color: $primary-color;
-                  font-weight: 600;
-                }
-              }
-            }
           }
         }
 

@@ -18,10 +18,23 @@ const Contact = () => {
   const onSubmit = async (data) => {
     setIsSubmitting(true);
 
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    // Format the message for WhatsApp
+    const message =
+      `*Formulir Pemesanan TJ Rent Car*\n\n` +
+      `*Nama*: ${data.name}\n` +
+      `*Tanggal Mulai*: ${data.startDate || "Belum ditentukan"}\n` +
+      `*Tanggal Selesai*: ${data.endDate || "Belum ditentukan"}\n` +
+      `*Pesan/Kebutuhan*: ${data.message}\n\n` +
+      `_Dikirim melalui website TJ Rent Car_`;
 
-    console.log("Form Data:", data);
+    // Create WhatsApp URL with formatted message
+    const whatsappUrl = `https://wa.me/6289655195880?text=${encodeURIComponent(
+      message
+    )}`;
+
+    // Open WhatsApp in new tab
+    window.open(whatsappUrl, "_blank");
+
     setIsSubmitting(false);
     setSubmitSuccess(true);
     reset();
@@ -134,8 +147,8 @@ const Contact = () => {
                   exit={{ opacity: 0, scale: 0.9 }}
                 >
                   <Icon icon="mdi:check-circle" className="success-icon" />
-                  Pesan Anda berhasil dikirim! Kami akan menghubungi Anda
-                  segera.
+                  Form berhasil! Anda akan diarahkan ke WhatsApp untuk
+                  melanjutkan pemesanan.
                 </motion.div>
               )}
 
@@ -157,58 +170,6 @@ const Contact = () => {
                   {errors.name && (
                     <span className="error-message">{errors.name.message}</span>
                   )}
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="phone">Nomor Telepon *</label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    {...register("phone", {
-                      required: "Nomor telepon wajib diisi",
-                      pattern: {
-                        value: /^[0-9+\-\s()]+$/,
-                        message: "Format nomor telepon tidak valid",
-                      },
-                    })}
-                    className={errors.phone ? "error" : ""}
-                  />
-                  {errors.phone && (
-                    <span className="error-message">
-                      {errors.phone.message}
-                    </span>
-                  )}
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="email">Email</label>
-                  <input
-                    type="email"
-                    id="email"
-                    {...register("email", {
-                      pattern: {
-                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                        message: "Format email tidak valid",
-                      },
-                    })}
-                    className={errors.email ? "error" : ""}
-                  />
-                  {errors.email && (
-                    <span className="error-message">
-                      {errors.email.message}
-                    </span>
-                  )}
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="carType">Jenis Mobil</label>
-                  <select id="carType" {...register("carType")}>
-                    <option value="">Pilih jenis mobil</option>
-                    <option value="MPV">MPV</option>
-                    <option value="Hatchback">Hatchback</option>
-                    <option value="SUV">SUV</option>
-                    <option value="Sedan">Sedan</option>
-                  </select>
                 </div>
 
                 <div className="form-row">

@@ -32,8 +32,8 @@ const HeroSection = () => {
     let isMounted = true;
 
     if (animationStarted && isMounted) {
-      animateNumber(500, (val) => isMounted && setMobilCount(val));
-      animateNumber(1000, (val) => isMounted && setPelangganCount(val), 2500);
+      animateNumber(11, (val) => isMounted && setMobilCount(val));
+      animateNumber(100, (val) => isMounted && setPelangganCount(val), 2500);
     }
 
     // Cleanup untuk mencegah memory leak
@@ -101,7 +101,11 @@ const HeroSection = () => {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                <Link to="/contact" className="btn btn-hero-secondary">
+                <Link
+                  to="https://wa.me/6289655195880"
+                  target="_blank"
+                  className="btn btn-hero-secondary"
+                >
                   <Icon icon="mdi:phone" className="btn-icon" />
                   Konsultasi Gratis
                 </Link>
@@ -161,7 +165,7 @@ const HeroSection = () => {
 
       <motion.div
         className="scroll-indicator"
-        initial={{ opacity: 0 }}
+        initial={{ opacity: 0, x: "-50%" }}
         animate={{
           opacity: 1,
           y: [0, 10, 0],

@@ -24,7 +24,7 @@ function App() {
         marginLeft: 20,
         marginRight: 20,
         btnPosition: "right",
-        whatsAppNumber: "089655195880",
+        whatsAppNumber: "6289655195880",
         welcomeMessage: "Hallo, Saya mau rental mobil nih",
         zIndex: 999999,
         btnColorScheme: "light",
