@@ -23,6 +23,10 @@
         @media (max-width: $tablet) {
           font-size: 2rem;
         }
+
+        @media (max-width: $mobile) {
+          font-size: 1.4rem;
+        }
       }
 
       p {
@@ -30,6 +34,10 @@
         opacity: 0.9;
         max-width: 600px;
         margin: 0 auto;
+      }
+
+      @media (max-width: $mobile) {
+        font-size: $font-size-base;
       }
     }
   }

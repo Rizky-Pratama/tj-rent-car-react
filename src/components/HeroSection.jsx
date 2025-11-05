@@ -102,7 +102,7 @@ const HeroSection = () => {
                 whileTap={{ scale: 0.98 }}
               >
                 <Link
-                  to="https://wa.me/6289655195880"
+                  to="https://wa.me/6289655195880/"
                   target="_blank"
                   className="btn btn-hero-secondary"
                 >

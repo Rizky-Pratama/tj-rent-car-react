@@ -23,11 +23,19 @@
         @media (max-width: $tablet) {
           font-size: 2rem;
         }
+        @media (max-width: $mobile) {
+          font-size: 1.4rem;
+        }
       }
 
       p {
         font-size: $font-size-lg;
         opacity: 0.9;
+
+        @media (max-width: $mobile) {
+          font-size: $font-size-base;
+        }
+
         max-width: 600px;
         margin: 0 auto;
       }
@@ -45,6 +53,10 @@
       grid-template-columns: 1fr;
       gap: $spacing-xl;
     }
+
+    @media (max-width: $mobile) {
+      padding: 0 0 $spacing-sm;
+    }
   }
 
   .contact-info {
@@ -52,12 +64,21 @@
       color: $primary-color;
       margin-bottom: $spacing-xl;
       font-size: 2rem;
+
+      @media (max-width: $mobile) {
+        margin-bottom: $spacing-sm;
+        font-size: 1rem;
+      }
     }
 
     .info-items {
       display: flex;
       flex-direction: column;
       gap: $spacing-lg;
+
+      @media (max-width: $mobile) {
+        gap: $spacing-sm;
+      }
     }
 
     .info-item {
@@ -76,10 +97,17 @@
         box-shadow: $shadow-md;
       }
 
+      @media (max-width: $mobile) {
+        padding: $spacing-sm;
+        gap: $spacing-sm;
+      }
+
       .info-icon {
         font-size: 2rem;
         min-width: 50px;
-        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         background-color: $white;
         padding: $spacing-sm;
         border-radius: $border-radius-md;
@@ -93,6 +121,10 @@
           color: $primary-color;
           margin-bottom: $spacing-xs;
           font-size: $font-size-lg;
+
+          @media (max-width: $mobile) {
+            font-size: $font-size-base;
+          }
         }
 
         p {
@@ -102,6 +134,10 @@
 
           &:last-child {
             margin-bottom: 0;
+          }
+
+          @media (max-width: $mobile) {
+            font-size: $font-size-sm;
           }
         }
       }
@@ -113,15 +149,28 @@
       padding: $spacing-xl;
       border: 1px solid rgba(0, 74, 173, 0.1);
 
+      @media (max-width: $mobile) {
+        padding: $spacing-md;
+      }
+
       h2 {
         color: $primary-color;
         margin-bottom: $spacing-sm;
         font-size: 1.8rem;
+
+        @media (max-width: $mobile) {
+          font-size: 1.4rem;
+        }
       }
 
       > p {
         color: $gray-medium;
         margin-bottom: $spacing-xl;
+
+        @media (max-width: $mobile) {
+          font-size: $font-size-sm;
+          margin-bottom: $spacing-sm;
+        }
       }
     }
 
@@ -145,6 +194,10 @@
           margin-bottom: $spacing-xs;
           font-weight: 500;
           color: $gray-dark;
+
+          @media (max-width: $mobile) {
+            font-size: $font-size-sm;
+          }
         }
 
         input,
@@ -172,11 +225,20 @@
           &::placeholder {
             color: $gray-medium;
           }
+
+          @media (max-width: $mobile) {
+            padding: $spacing-sm;
+            font-size: $font-size-sm;
+          }
         }
 
         textarea {
           resize: vertical;
           min-height: 120px;
+
+          @media (max-width: $mobile) {
+            font-size: $font-size-sm;
+          }
         }
 
         .error-message {
@@ -193,6 +255,7 @@
         gap: $spacing-md;
 
         @media (max-width: $mobile) {
+          gap: 0;
           grid-template-columns: 1fr;
         }
       }
@@ -223,6 +286,11 @@
 
         &:disabled {
           cursor: not-allowed;
+        }
+
+        @media (max-width: $mobile) {
+          padding: $spacing-sm;
+          font-size: $font-size-sm;
         }
       }
     }

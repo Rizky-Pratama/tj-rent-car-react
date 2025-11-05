@@ -30,6 +30,10 @@
     .navbar-logo {
       height: 70px;
       margin-right: $spacing-sm;
+
+      @media (max-width: $mobile) {
+        height: 40px;
+      }
     }
 
     h3 {
@@ -37,6 +41,10 @@
       font-weight: 700;
       color: $secondary-color;
       margin: 0;
+
+      @media (max-width: $mobile) {
+        font-size: $font-size-base;
+      }
     }
   }
 
