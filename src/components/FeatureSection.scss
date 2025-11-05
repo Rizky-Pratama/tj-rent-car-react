@@ -1,0 +1,86 @@
+@use "sass:color";
+@use "../styles/variables" as *;
+
+.feature-section {
+  background-color: $gray-light;
+
+  .section-header {
+    h2 {
+      color: $primary-color;
+      margin-bottom: $spacing-md;
+    }
+
+    p {
+      font-size: $font-size-lg;
+      color: $gray-medium;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+
+  .features-grid {
+    gap: $spacing-xl;
+  }
+
+  .feature-card {
+    padding: $spacing-xl;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all $transition-fast;
+    border: 1px solid rgba(0, 74, 173, 0.1);
+
+    &:hover {
+      border-color: $primary-color;
+    }
+
+    .feature-icon {
+      font-size: 4rem;
+      color: $white;
+      margin-bottom: $spacing-lg;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100px;
+      height: 100px;
+      margin: 0 auto $spacing-lg;
+      background: linear-gradient(
+        135deg,
+        $primary-color,
+        color.adjust($primary-color, $lightness: 20%)
+      );
+      border-radius: 50%;
+      position: relative;
+
+      span {
+        position: relative;
+        z-index: 2;
+      }
+    }
+
+    h3 {
+      color: $primary-color;
+      margin-bottom: $spacing-md;
+      font-size: $font-size-xl;
+    }
+
+    p {
+      color: $gray-medium;
+      line-height: 1.6;
+      margin: 0;
+      flex-grow: 1;
+    }
+
+    @media (max-width: $tablet) {
+      padding: $spacing-lg;
+
+      .feature-icon {
+        width: 80px;
+        height: 80px;
+        font-size: 3rem;
+      }
+    }
+  }
+}

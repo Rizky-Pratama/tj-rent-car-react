@@ -1,0 +1,140 @@
+@use "../styles/variables" as *;
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: $shadow-sm;
+  z-index: $z-index-navbar;
+  transition: all $transition-fast;
+
+  .navbar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $spacing-md 0;
+  }
+
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: $primary-color;
+    font-weight: 700;
+    font-size: $font-size-xl;
+    z-index: 2;
+
+    .navbar-logo {
+      height: 70px;
+      margin-right: $spacing-sm;
+    }
+
+    h3 {
+      font-size: $font-size-xl;
+      font-weight: 700;
+      color: $secondary-color;
+      margin: 0;
+    }
+  }
+
+  .navbar-menu {
+    display: flex;
+    gap: $spacing-lg;
+    align-items: center;
+
+    @media (max-width: $tablet) {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: $white;
+      flex-direction: column;
+      padding: $spacing-lg;
+      box-shadow: $shadow-md;
+      transform: translateY(-100%);
+      opacity: 0;
+      visibility: hidden;
+      transition: all $transition-fast;
+
+      &.navbar-menu-open {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+        z-index: 1;
+      }
+    }
+  }
+
+  .navbar-link {
+    text-decoration: none;
+    color: $gray-dark;
+    font-weight: 500;
+    padding: $spacing-xs $spacing-sm;
+    border-radius: $border-radius-md;
+    transition: all $transition-fast;
+    position: relative;
+
+    &:hover {
+      color: $primary-color;
+    }
+
+    &.active {
+      color: $primary-color;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 20px;
+        height: 3px;
+        background-color: $secondary-color;
+        border-radius: 2px;
+      }
+    }
+
+    @media (max-width: $tablet) {
+      padding: $spacing-sm;
+      width: 100%;
+      text-align: center;
+
+      &.active::after {
+        display: none;
+      }
+    }
+  }
+
+  .navbar-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: $spacing-xs;
+    border-radius: $border-radius-md;
+    transition: background-color $transition-fast;
+
+    @media (max-width: $tablet) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &:hover {
+      background-color: rgba($primary-color, 0.1);
+    }
+
+    .toggle-icon {
+      font-size: 1.5rem;
+      color: $primary-color;
+      transition: all $transition-fast;
+    }
+
+    &:active .toggle-icon {
+      transform: scale(0.95);
+    }
+  }
+}

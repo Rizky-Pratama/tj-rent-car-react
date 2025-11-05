@@ -1,0 +1,167 @@
+@use "sass:color";
+@use "../styles/variables" as *;
+
+.how-it-works {
+  background-color: $gray-light;
+
+  .section-header {
+    h2 {
+      color: $primary-color;
+      margin-bottom: $spacing-md;
+    }
+
+    p {
+      font-size: $font-size-lg;
+      color: $gray-medium;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+
+  .steps-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: $spacing-lg;
+    position: relative;
+
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .step-item {
+      flex: 1;
+      text-align: center;
+      position: relative;
+      max-width: 300px;
+
+      @media (max-width: $tablet) {
+        width: 100%;
+        max-width: 400px;
+      }
+
+      .step-icon {
+        position: relative;
+        width: 120px;
+        height: 120px;
+        margin: 0 auto $spacing-lg;
+        color: $white;
+        background: linear-gradient(
+          135deg,
+          $primary-color,
+          color.adjust($primary-color, $lightness: 20%)
+        );
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: $shadow-lg;
+        cursor: pointer;
+        z-index: 2;
+
+        .step-number {
+          position: absolute;
+          top: -10px;
+          right: -10px;
+          width: 40px;
+          height: 40px;
+          background-color: $secondary-color;
+          color: $white;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-weight: 700;
+          font-size: $font-size-sm;
+          box-shadow: $shadow-md;
+        }
+
+        .icon {
+          font-size: 3rem;
+          filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
+        }
+
+        @media (max-width: $tablet) {
+          width: 100px;
+          height: 100px;
+
+          .icon {
+            font-size: 2.5rem;
+          }
+
+          .step-number {
+            width: 35px;
+            height: 35px;
+          }
+        }
+      }
+
+      .step-content {
+        h3 {
+          color: $primary-color;
+          margin-bottom: $spacing-md;
+          font-size: $font-size-xl;
+        }
+
+        p {
+          color: $gray-medium;
+          line-height: 1.6;
+          margin: 0;
+        }
+      }
+
+      .step-connector {
+        position: absolute;
+        top: 60px;
+        right: -50%;
+        height: 3px;
+        background: linear-gradient(90deg, $primary-color, $secondary-color);
+        z-index: 1;
+
+        &::after {
+          content: "";
+          position: absolute;
+          right: -8px;
+          top: -3px;
+          width: 0;
+          height: 0;
+          border-left: 8px solid $secondary-color;
+          border-top: 4px solid transparent;
+          border-bottom: 4px solid transparent;
+        }
+
+        @media (max-width: $tablet) {
+          display: none;
+        }
+      }
+
+      &:hover {
+        .step-icon {
+          transform: translateY(-5px);
+          box-shadow: 0 15px 30px rgba(0, 74, 173, 0.3);
+        }
+      }
+    }
+  }
+
+  // Mobile connector (vertical)
+  @media (max-width: $tablet) {
+    // .steps-container::before {
+    //   content: "";
+    //   position: absolute;
+    //   left: 50%;
+    //   top: 60px;
+    //   bottom: 60px;
+    //   width: 3px;
+    //   background: linear-gradient(180deg, $primary-color, $secondary-color);
+    //   transform: translateX(-50%);
+    //   z-index: 0;
+    // }
+
+    .step-item {
+      position: relative;
+      z-index: 1;
+    }
+  }
+}

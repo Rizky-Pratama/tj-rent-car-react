@@ -1,0 +1,211 @@
+[
+  {
+    "id": 1,
+    "nama_mobil": "Toyota Avanza G",
+    "merk": "Toyota",
+    "model": "Avanza 1.3 G MT",
+    "plat_nomor": "B 1234 ABC",
+    "tahun": 2022,
+    "foto": "mobil/wncoNj12NCuTmLUwOvF4xx3ky1PaarxRDLVEcsEf.jpg",
+    "transmisi": "manual",
+    "jenis_bahan_bakar": "bensin",
+    "warna": "Putih",
+    "kapasitas_penumpang": 7,
+    "status": "tersedia",
+    "created_at": "2025-10-17T14:07:58.000000Z",
+    "updated_at": "2025-10-21T03:45:17.000000Z",
+    "deleted_at": null,
+    "harga_sewa": [
+      {
+        "id": 1,
+        "mobil_id": 1,
+        "jenis_sewa_id": 1,
+        "harga_per_hari": 350000,
+        "aktif": true,
+        "catatan": "Harga standar Toyota Avanza per hari",
+        "created_at": "2025-10-17T14:07:58.000000Z",
+        "updated_at": "2025-10-17T14:07:58.000000Z",
+        "jenis_sewa": {
+          "id": 1,
+          "nama_jenis": "Harian",
+          "slug": "harian",
+          "deskripsi": "Sewa mobil per hari dalam kota",
+          "tarif_denda_per_hari": 50000,
+          "created_at": "2025-10-17T14:07:58.000000Z",
+          "updated_at": "2025-10-17T14:07:58.000000Z"
+        }
+      },
+      {
+        "id": 6,
+        "mobil_id": 1,
+        "jenis_sewa_id": 3,
+        "harga_per_hari": 400000,
+        "aktif": true,
+        "catatan": null,
+        "created_at": "2025-10-18T15:49:10.000000Z",
+        "updated_at": "2025-10-18T15:49:10.000000Z",
+        "jenis_sewa": {
+          "id": 3,
+          "nama_jenis": "Harian+Driver",
+          "slug": "hariandriver",
+          "deskripsi": null,
+          "tarif_denda_per_hari": null,
+          "created_at": "2025-10-18T15:27:34.000000Z",
+          "updated_at": "2025-10-18T15:29:13.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "nama_mobil": "Honda Jazz RS",
+    "merk": "Honda",
+    "model": "Jazz 1.5 RS CVT",
+    "plat_nomor": "B 5678 DEF",
+    "tahun": 2021,
+    "foto": "mobil/2LpqC04RIFeSx2NR0nwerhGdv4JBYt9CY9rzQDTa.jpg",
+    "transmisi": "automatic",
+    "jenis_bahan_bakar": "bensin",
+    "warna": "Merah",
+    "kapasitas_penumpang": 5,
+    "status": "tersedia",
+    "created_at": "2025-10-17T14:07:58.000000Z",
+    "updated_at": "2025-10-21T03:53:17.000000Z",
+    "deleted_at": null,
+    "harga_sewa": [
+      {
+        "id": 2,
+        "mobil_id": 2,
+        "jenis_sewa_id": 1,
+        "harga_per_hari": 400000,
+        "aktif": true,
+        "catatan": "Harga standar Honda Jazz per hari",
+        "created_at": "2025-10-17T14:07:58.000000Z",
+        "updated_at": "2025-10-17T14:07:58.000000Z",
+        "jenis_sewa": {
+          "id": 1,
+          "nama_jenis": "Harian",
+          "slug": "harian",
+          "deskripsi": "Sewa mobil per hari dalam kota",
+          "tarif_denda_per_hari": 50000,
+          "created_at": "2025-10-17T14:07:58.000000Z",
+          "updated_at": "2025-10-17T14:07:58.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "nama_mobil": "Mitsubishi Xpander Ultimate",
+    "merk": "Mitsubishi",
+    "model": "Xpander Ultimate CVT",
+    "plat_nomor": "B 9012 GHI",
+    "tahun": 2023,
+    "foto": "mobil/iaz0K2rm5cgPpl95R63k2mhAbDH3dokwDpK57xoo.jpg",
+    "transmisi": "automatic",
+    "jenis_bahan_bakar": "bensin",
+    "warna": "Hitam",
+    "kapasitas_penumpang": 7,
+    "status": "tersedia",
+    "created_at": "2025-10-17T14:07:58.000000Z",
+    "updated_at": "2025-10-21T03:52:52.000000Z",
+    "deleted_at": null,
+    "harga_sewa": [
+      {
+        "id": 3,
+        "mobil_id": 3,
+        "jenis_sewa_id": 1,
+        "harga_per_hari": 450000,
+        "aktif": true,
+        "catatan": "Harga standar Mitsubishi Xpander per hari",
+        "created_at": "2025-10-17T14:07:58.000000Z",
+        "updated_at": "2025-10-17T14:07:58.000000Z",
+        "jenis_sewa": {
+          "id": 1,
+          "nama_jenis": "Harian",
+          "slug": "harian",
+          "deskripsi": "Sewa mobil per hari dalam kota",
+          "tarif_denda_per_hari": 50000,
+          "created_at": "2025-10-17T14:07:58.000000Z",
+          "updated_at": "2025-10-17T14:07:58.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "nama_mobil": "Daihatsu Terios X",
+    "merk": "Daihatsu",
+    "model": "Terios 1.5 X MT",
+    "plat_nomor": "B 3456 JKL",
+    "tahun": 2020,
+    "foto": "mobil/kt5zKBVkyKkmxtknlz9XMcEFXIDBEHf1AFsFenxA.jpg",
+    "transmisi": "manual",
+    "jenis_bahan_bakar": "bensin",
+    "warna": "Silver",
+    "kapasitas_penumpang": 7,
+    "status": "tersedia",
+    "created_at": "2025-10-17T14:07:58.000000Z",
+    "updated_at": "2025-10-21T03:49:25.000000Z",
+    "deleted_at": null,
+    "harga_sewa": [
+      {
+        "id": 4,
+        "mobil_id": 4,
+        "jenis_sewa_id": 1,
+        "harga_per_hari": 380000,
+        "aktif": true,
+        "catatan": "Harga standar Daihatsu Terios per hari",
+        "created_at": "2025-10-17T14:07:58.000000Z",
+        "updated_at": "2025-10-17T14:07:58.000000Z",
+        "jenis_sewa": {
+          "id": 1,
+          "nama_jenis": "Harian",
+          "slug": "harian",
+          "deskripsi": "Sewa mobil per hari dalam kota",
+          "tarif_denda_per_hari": 50000,
+          "created_at": "2025-10-17T14:07:58.000000Z",
+          "updated_at": "2025-10-17T14:07:58.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "nama_mobil": "Suzuki Ertiga GX",
+    "merk": "Suzuki",
+    "model": "Ertiga 1.5 GX AT",
+    "plat_nomor": "B 7890 MNO",
+    "tahun": 2022,
+    "foto": "mobil/bo5NfTwJDDJP5uw4lv7squHBg5RlfUuNCxOYUiRx.jpg",
+    "transmisi": "automatic",
+    "jenis_bahan_bakar": "bensin",
+    "warna": "Biru",
+    "kapasitas_penumpang": 7,
+    "status": "disewa",
+    "created_at": "2025-10-17T14:07:58.000000Z",
+    "updated_at": "2025-10-21T03:48:27.000000Z",
+    "deleted_at": null,
+    "harga_sewa": [
+      {
+        "id": 5,
+        "mobil_id": 5,
+        "jenis_sewa_id": 1,
+        "harga_per_hari": 370000,
+        "aktif": true,
+        "catatan": "Harga standar Suzuki Ertiga per hari",
+        "created_at": "2025-10-17T14:07:58.000000Z",
+        "updated_at": "2025-10-17T14:07:58.000000Z",
+        "jenis_sewa": {
+          "id": 1,
+          "nama_jenis": "Harian",
+          "slug": "harian",
+          "deskripsi": "Sewa mobil per hari dalam kota",
+          "tarif_denda_per_hari": 50000,
+          "created_at": "2025-10-17T14:07:58.000000Z",
+          "updated_at": "2025-10-17T14:07:58.000000Z"
+        }
+      }
+    ]
+  }
+]
